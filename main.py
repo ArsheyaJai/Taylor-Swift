@@ -1,8 +1,9 @@
 def main():
   Quiz()
 
-
+#basic use of an integer variable
 num_albums = 10
+#this statement will print only once at the beginning, so it is out of the tryAgain loop
 print("Heads up: Taylor Swift has ", num_albums, " albums!")
 
 
@@ -10,6 +11,7 @@ def Quiz():
   tryAgain = True
 
   #basic while loop for namesake
+  #ask user to pick a genre from the list and loop until they pick an available genre
   while tryAgain:
     list_of_genres = (
         "pop, electro/synth pop, pop rock, indie, soft rock, bedroom pop")
@@ -37,7 +39,7 @@ def Quiz():
     else:
       print('please enter a genre from the list')
 
-  #output based on genre chosen
+  #output based on genre chosen for the 1989 album
   while Genre.lower() == 'pop':
     SongRec = input('Do you want song recommendations?: ')
     if SongRec.lower() == 'yes':
@@ -53,6 +55,7 @@ def Quiz():
     else:
       print('please enter "yes" or "no"')
 
+  #output based on genre chosen for the reputation album
   while Genre.lower() == 'electro/synth pop':
     SongRec = input('Do you want song recommendations?: ')
     if SongRec.lower() == 'yes':
@@ -68,6 +71,7 @@ def Quiz():
     else:
       print('please enter "yes" or "no"')
 
+  #output based on genre chosen for the Lover album
   while Genre.lower() == 'pop rock':
     SongRec = input('Do you want song recommendations?: ')
     if SongRec.lower() == 'yes':
@@ -83,6 +87,7 @@ def Quiz():
     else:
       print('please enter "yes" or "no"')
 
+  #output based on genre chosen for the folklore album
   while Genre.lower() == 'indie':
     SongRec = input('Do you want song recommendations?: ')
     if SongRec.lower() == 'yes':
@@ -96,6 +101,7 @@ def Quiz():
     else:
       print('please enter "yes" or "no"')
 
+  #output based on genre chosen for the evermore album
   while Genre.lower() == 'soft rock':
     SongRec = input('Do you want song recommendations?: ')
     if SongRec.lower() == 'yes':
@@ -111,6 +117,7 @@ def Quiz():
     else:
       print('please enter "yes" or "no"')
 
+  #output based on genre chosen for the Midnights album
   while Genre.lower() == 'bedroom pop':
     SongRec = input('Do you want song recommendations?: ')
     if SongRec.lower() == 'yes':
@@ -126,6 +133,8 @@ def Quiz():
     else:
       print('please enter "yes" or "no"')
 
+  #ask user if they want to do this again
+  #this determines if the main loop is repeated
   again = input('Would you like to try another genre?: ')
   if again.lower() == 'no':
     tryAgain = False
