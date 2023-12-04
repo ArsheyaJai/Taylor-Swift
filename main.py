@@ -1,3 +1,4 @@
+#this is the main function that starts the program, and it calls the Quiz function to start the quiz
 def main():
   Quiz()
 
@@ -6,16 +7,16 @@ num_albums = 10
 #this statement will print only once at the beginning, so it is out of the tryAgain loop
 print("Heads up: Taylor Swift has ", num_albums, " albums!")
 
-
+#everything under this will print everytime the function "tryAgain" is true, so it's under the main function
 def Quiz():
   tryAgain = True
 
   #basic while loop for namesake
   #ask user to pick a genre from the list and loop until they pick an available genre
   while tryAgain:
-    list_of_genres = (
-        "pop, electro/synth pop, pop rock, indie, soft rock, bedroom pop")
-    print(list_of_genres)
+    list_of_genres = ["pop", "electro/synth pop", "pop rock" , "indie" ,  "soft rock", "bedroom pop"]
+    for genre in list_of_genres:
+      print(genre)
     Genre = input('What is your favorite genre?: ')
     print("you said: " + Genre)
     if Genre.lower() == 'pop':
